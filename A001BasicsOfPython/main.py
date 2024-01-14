@@ -86,3 +86,124 @@ text = "There are 123 apples and 45 bananas."
 matches = re.findall(pattern, text)
 print("Numbers in text:", matches)
 
+#more assigment operators
+x = 10  # Assigns 10 to x
+
+#Addition Assignment Operator (+=)
+x = 5
+x += 3  # Equivalent to x = x + 3
+print("After += 3:", x)  # x is now 8
+#Subtraction Assignment Operator (-=)
+x = 10
+x -= 4  # Equivalent to x = x - 4
+print("After -= 4:", x)  # x is now 6
+#Multiplication Assignment Operator (*=)
+x = 6
+x *= 3  # Equivalent to x = x * 3
+print("After *= 3:", x)  # x is now 18
+
+#Division Assignment Operator (/=)
+x = 20
+x /= 4  # Equivalent to x = x / 4
+print("After /= 4:", x)  # x is now 5.0
+
+#Modulus Assignment Operator (%=)
+x = 10
+x %= 3  # Equivalent to x = x % 3
+print("After %= 3:", x)  # x is now 1
+#Exponentiation Assignment Operator (**=)
+x = 5
+x **= 2  # Equivalent to x = x ** 2
+print("After **= 2:", x)  # x is now 25
+
+#Floor Division Assignment Operator (//=)
+x = 15
+x //= 4  # Equivalent to x = x // 4
+print("After //= 4:", x)  # x is now 3
+#Bitwise OR Assignment Operator (|=)
+x = 4  # Binary: 100
+x |= 3  # Binary: 011
+print("After |= 3:", x)  # x is now 7 (Binary: 111)
+# Bitwise XOR Assignment Operator (^=)
+x = 5  # Binary: 101
+x ^= 3  # Binary: 011
+print("After ^= 3:", x)  # x is now 6 (Binary: 110)
+
+#Bitwise Left Shift Assignment Operator (<<=)
+x = 2  # Binary: 10
+x <<= 2  # Shift left by 2 bits
+print("After <<= 2:", x)  # x is now 8 (Binary: 1000)
+
+#Bitwise Right Shift Assignment Operator (>>=)
+x = 8  # Binary: 1000
+x >>= 2  # Shift right by 2 bits
+print("After >>= 2:", x)  # x is now 2 (Binary: 10)
+
+
+#Control Structures
+
+number = 5
+#if-else
+if number > 0:
+    print("Positive number")
+else:
+    print("Negative number")
+#for loop
+for i in range(5):
+    print(i)
+#while loop
+count=0
+while count < 5:
+    print(count)
+    count += 1
+
+#Functions and Modules
+
+# Defining a function
+def greet(name):
+    return f"Hello {name}!"
+
+# Using the function
+print(greet("Alice"))
+
+#Exception Handling
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+#File Handling
+
+def write_to_file(filename, data):
+    try:
+        with open(filename, "w") as file:
+            file.write(data)
+    except IOError as e:
+        print(f"An error occurred while writing to the file: {e}")
+    else:
+        print(f"Data successfully written to {filename}")
+
+def read_from_file(filename):
+    try:
+        with open(filename, "r") as file:
+            return file.read()
+    except IOError as e:
+        print(f"An error occurred while reading the file: {e}")
+        return None
+
+def main():
+    filename = "example.txt"
+    user_input = input("Enter some text to write to the file: ")
+    write_to_file(filename, user_input)
+
+    print("\nReading from the file...")
+    content = read_from_file(filename)
+    if content is not None:
+        print("Content of the file:")
+        print(content)
+
+if __name__ == "__main__":
+    main()
+
+
+
